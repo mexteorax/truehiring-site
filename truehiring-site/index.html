@@ -7,7 +7,7 @@
   <meta name="description" content="TrueHiring™ provides a verification-first hiring framework powered by integrity indices and trust-based infrastructure." />
   <style>
     :root{
-      --bg:#000000;        /* keep pure black background */
+      --bg:#000000;        /* pure black */
       --fg:#ffffff;        /* main text */
       --muted:#c9c9c9;     /* secondary text */
       --maxw:820px;
@@ -20,31 +20,43 @@
     }
     .wrap{flex:1; display:flex; align-items:center; justify-content:center; padding:40px 20px}
     .card{width:100%; max-width:var(--maxw); text-align:center}
-    .kicker{letter-spacing:.18em; text-transform:uppercase; color:var(--muted); font-size:.8rem; margin-bottom:12px}
-    .title{font-weight:800; font-size:clamp(32px,6vw,56px); line-height:1.05; margin:0 0 6px}
-    .tagline{color:var(--muted); font-size:clamp(12px,2.4vw,14px); letter-spacing:.25em; text-transform:lowercase; margin:8px 0 22px}
+    /* Brand name */
+    .kicker{
+      font-size:2rem; 
+      font-weight:700;
+      color:var(--fg);
+      margin-bottom:18px;
+      letter-spacing:0;
+      text-transform:none;
+    }
+    /* Smaller headline */
+    .title{
+      font-weight:800; font-size:clamp(22px,4vw,34px);
+      line-height:1.2; margin:0 0 10px;
+    }
+    .tagline{color:var(--muted); font-size:.9rem; letter-spacing:.25em; text-transform:lowercase; margin:8px 0 22px}
     .logo{
       width:min(260px,55vw); aspect-ratio:1/1; margin:24px auto; display:block;
-      filter: drop-shadow(0 6px 22px rgba(255,255,255,.08));
+      /* glow removed */
     }
-    footer{opacity:.66; font-size:.8rem; margin:20px auto; text-align:center}
     .desc{
       max-width:720px; margin:30px auto; padding:0 20px;
       font-size:14px; line-height:1.55; color:var(--muted); text-align:center;
     }
+    footer{opacity:.66; font-size:.8rem; margin:20px auto; text-align:center}
   </style>
 </head>
 <body>
   <main class="wrap">
     <section class="card">
-      <div class="kicker">TRUEHIRING™</div>
+      <div class="kicker">TrueHiring</div>
       <h1 class="title">The Ethical Hiring Framework</h1>
       <div class="tagline">unicorn chase is over</div>
       <img class="logo" src="logo.png" alt="TrueHiring shielded star logo" />
     </section>
   </main>
 
-  <!-- moved description to bottom -->
+  <!-- Bottom description -->
   <div class="desc">
     TrueHiring™ provides organizations with a verification-first hiring framework,
     powered by integrity indices and trust-based infrastructure. We help companies
