@@ -7,21 +7,18 @@
   <meta name="description" content="TrueHiring™ provides a verification-first hiring framework powered by integrity indices and trust-based infrastructure." />
   <style>
     :root{
-      --bg:#0a0a0a;        /* page background */
+      --bg:#000000;        /* keep pure black background */
       --fg:#ffffff;        /* main text */
       --muted:#c9c9c9;     /* secondary text */
-      --accent:#ffffff;    /* keep white for logo harmony */
       --maxw:820px;
     }
-    /* reset */
-    *,*::before,*::after{box-sizing:border-box}
-    html,body{height:100%}
+    html,body{height:100%;margin:0}
     body{
-      margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif;
-      background:var(--bg); color:var(--fg); -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif;
+      background:var(--bg); color:var(--fg); display:flex; flex-direction:column; justify-content:space-between;
+      -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
     }
-    a{color:inherit; text-decoration:none}
-    .wrap{min-height:100dvh; display:flex; align-items:center; justify-content:center; padding:40px 20px}
+    .wrap{flex:1; display:flex; align-items:center; justify-content:center; padding:40px 20px}
     .card{width:100%; max-width:var(--maxw); text-align:center}
     .kicker{letter-spacing:.18em; text-transform:uppercase; color:var(--muted); font-size:.8rem; margin-bottom:12px}
     .title{font-weight:800; font-size:clamp(32px,6vw,56px); line-height:1.05; margin:0 0 6px}
@@ -30,50 +27,33 @@
       width:min(260px,55vw); aspect-ratio:1/1; margin:24px auto; display:block;
       filter: drop-shadow(0 6px 22px rgba(255,255,255,.08));
     }
-    .subhead{font-size:clamp(16px,2.6vw,22px); font-weight:700; margin:22px 0 10px}
-    .copy{
-      color:var(--muted); font-size:clamp(14px,2.4vw,16px);
-      line-height:1.55; max-width:720px; margin:0 auto;
+    footer{opacity:.66; font-size:.8rem; margin:20px auto; text-align:center}
+    .desc{
+      max-width:720px; margin:30px auto; padding:0 20px;
+      font-size:14px; line-height:1.55; color:var(--muted); text-align:center;
     }
-    /* tiny footer */
-    footer{opacity:.66; font-size:.8rem; margin-top:40px}
-    /* spacing helpers */
-    .sp-xxs{height:8px} .sp-xs{height:14px} .sp-s{height:20px} .sp-m{height:28px} .sp-l{height:40px}
   </style>
 </head>
 <body>
   <main class="wrap">
     <section class="card">
-      <!-- TOP: minimal hero -->
       <div class="kicker">TRUEHIRING™</div>
       <h1 class="title">The Ethical Hiring Framework</h1>
       <div class="tagline">unicorn chase is over</div>
-
-      <!-- LOGO -->
-      <!-- Replace logo.png if you rename your file -->
       <img class="logo" src="logo.png" alt="TrueHiring shielded star logo" />
-
-      <!-- DESCRIPTIVE TEXT (smaller, after the visual) -->
-      <div class="sp-s"></div>
-      <h2 class="subhead">Built for trust, not surveillance</h2>
-      <p class="copy">
-        TrueHiring™ provides organizations with a verification-first hiring framework,
-        powered by integrity indices and trust-based infrastructure. We help companies
-        ensure ethical hiring <em>without</em> background checks or sensitive personal data collection.
-      </p>
-
-      <!-- Optional CTA (commented out) -->
-      <!--
-      <div class="sp-m"></div>
-      <p><a href="#updates" style="border:1px solid #fff; padding:10px 16px; border-radius:999px;">Get updates</a></p>
-      -->
-
-      <footer>© <span id="year"></span> TrueHiring Org LLC — All rights reserved.</footer>
     </section>
   </main>
 
+  <!-- moved description to bottom -->
+  <div class="desc">
+    TrueHiring™ provides organizations with a verification-first hiring framework,
+    powered by integrity indices and trust-based infrastructure. We help companies
+    ensure ethical hiring <em>without</em> background checks or sensitive personal data collection.
+  </div>
+
+  <footer>© <span id="year"></span> TrueHiring Org LLC — All rights reserved.</footer>
+
   <script>
-    // Keep the year current automatically
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
