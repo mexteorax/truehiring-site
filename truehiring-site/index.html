@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TrueHiring</title>
+  <style>
+    html,body {
+      height:100%; margin:0;
+      background:#000; color:#fff;
+      font-family:system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+    .wrap {
+      height:100%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      flex-direction:column;
+      gap:6px;                 /* slightly tighter line spacing */
+      text-align:center;
+      padding:20px;
+      box-sizing:border-box;
+    }
+    .logo {
+      max-width:40vmin;
+      width:min(360px,60%);
+      height:auto;
+      margin-bottom:12px;      /* smaller gap between logo & text */
+    }
+    .heading {
+      font-size:clamp(14px,2vmin,18px);
+      opacity:0.9;
+      letter-spacing:0.04em;
+    }
+    .brand {
+      font-size:clamp(30px,6vmin,56px); /* large but a touch softer */
+      font-weight:400;                  /* not bold */
+    }
+    .small {
+      font-size:clamp(12px,1.8vmin,15px);
+      font-style:italic;
+      opacity:0.8;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <img class="logo" src="logo.png" alt="TrueHiring logo">
+    <div class="heading">Unicorn chase is over</div>
+    <div class="brand">TrueHiring</div>
+    <div class="small">stay tuned</div>
+  </div>
+</body>
